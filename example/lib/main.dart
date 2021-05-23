@@ -57,10 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
             apiKey: "6LeCwZYUAAAAAJo8IVvGX9dH65Rw89vxaxErCeou",
             apiSecret: "6LeCwZYUAAAAAKGahIjwfOARevvRETgvwhPMKCs_",
             controller: recaptchaV2Controller,
-            onVerifiedError: (err){
+            onVerifiedError: (err, token){
               print(err);
             },
-            onVerifiedSuccessfully: (success) {
+            onVerifiedSuccessfully: (success, token) {
               setState(() {
                 if (success) {
                   verifyResult = "You've been verified successfully.";
